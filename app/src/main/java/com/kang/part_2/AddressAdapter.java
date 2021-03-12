@@ -38,13 +38,25 @@ public class AddressAdapter extends ArrayAdapter<Address> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        convertView = inflater.inflate(layout_id,null);
+        if(convertView == null) {
+            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            convertView = inflater.inflate(layout_id,null);
 
-        TextView text_name = convertView.findViewById(R.id.text_name);
-        TextView text_phone = convertView.findViewById(R.id.text_phone);
-        TextView text_email = convertView.findViewById(R.id.text_email);
-        ImageView image_icon = convertView.findViewById(R.id.image_icon);
+            AddressHolder holder = new AddressHolder(convertView);
+            convertView.setTag(holder);
+        }
+
+        AddressHolder holder = (AddressHolder) convertView.getTag();
+
+        //TextView text_name = convertView.findViewById(R.id.text_name);
+        //TextView text_phone = convertView.findViewById(R.id.text_phone);
+        //TextView text_email = convertView.findViewById(R.id.text_email);
+        //ImageView image_icon = convertView.findViewById(R.id.image_icon);
+
+        TextView text_name = holder.text_name;
+        TextView text_phone = holder.text_phone;
+        TextView text_email = holder.text_email;
+        ImageView image_icon = holder.image_icon;
 
         final Address item = array_address.get(position);
 
