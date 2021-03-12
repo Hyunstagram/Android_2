@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">part_2</string>
+
+    <string name="title_dynamic">DYNAMIC LIST</string>
+    <string name="name_dynamic">NAME</string>
+    <string name="add_dynamic">ADD</string>
+    <string-array name="fruits_dynamic">
+        <item>apple</item>
+        <item>banana</item>
+        <item>mellon</item>
+        <item>grape</item>
+        <item>kiwi</item>
+        <item>cherry</item>
+    </string-array>
+</resources>
