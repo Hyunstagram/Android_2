@@ -12,4 +12,8 @@
         <item>kiwi</item>
         <item>cherry</item>
     </string-array>
+
+    <string name="title_simple">SIMPLE LIST</string>
+    <string name="name_simple">NAME</string>
+    <string name="area_simple">AREA</string>
 </resources>
