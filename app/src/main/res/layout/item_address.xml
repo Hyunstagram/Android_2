@@ -10,8 +10,9 @@
         android:id="@+id/image_icon"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        tools:srcCompat="@tools:sample/avatars"
-        android:contentDescription="@string/todo" />
+        android:contentDescription="@string/todo"
+        android:onClick="onClick"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,6 +26,7 @@
             android:id="@+id/text_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onClick"
             android:text="@string/name_address"
             android:textColor="@color/black"
             android:textSize="24sp"
@@ -34,6 +36,7 @@
             android:id="@+id/text_phone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onClick"
             android:text="@string/phone_address"
             android:textColor="@color/black" />
 
@@ -42,7 +45,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/email_address"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:onClick="onClick" />
     </LinearLayout>
 
 </LinearLayout>

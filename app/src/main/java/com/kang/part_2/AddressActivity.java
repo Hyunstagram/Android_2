@@ -4,9 +4,12 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -102,5 +105,26 @@ public class AddressActivity extends AppCompatActivity {
                 adapter.notifyDataSetChanged();
             }
         });
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(AddressActivity.this, "Item : " + ((TextView)view.findViewById(R.id.text_name)).getText(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    public void onClick(View v) {
+        switch (v.getId())
+        {
+            case R.id.text_name:
+            case R.id.text_phone:
+            case R.id.text_email:
+                Log.i(TAG, "Item : " + ((TextView)v).getText());
+                break;
+            case R.id.image_icon:
+                Log.i(TAG, "Image");
+                break;
+        }
     }
 }
